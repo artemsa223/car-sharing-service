@@ -1,4 +1,4 @@
-package carsharingservice.carsharingservice.dto;
+package carsharingservice.carsharingservice.dto.auth;
 
 import carsharingservice.carsharingservice.validation.fieldmatch.FieldMatch;
 import jakarta.validation.constraints.Email;

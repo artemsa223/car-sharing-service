@@ -1,12 +1,12 @@
 package carsharingservice.carsharingservice.controllers;
 
-import carsharingservice.carsharingservice.dto.UserLoginRequestDto;
-import carsharingservice.carsharingservice.dto.UserLoginResponseDto;
-import carsharingservice.carsharingservice.dto.UserRegistrationRequestDto;
-import carsharingservice.carsharingservice.dto.UserResponseDto;
+import carsharingservice.carsharingservice.dto.auth.UserLoginRequestDto;
+import carsharingservice.carsharingservice.dto.auth.UserLoginResponseDto;
+import carsharingservice.carsharingservice.dto.auth.UserRegistrationRequestDto;
+import carsharingservice.carsharingservice.dto.auth.UserResponseDto;
 import carsharingservice.carsharingservice.exception.RegistrationException;
 import carsharingservice.carsharingservice.security.AuthenticationService;
-import carsharingservice.carsharingservice.service.UserService;
+import carsharingservice.carsharingservice.service.user.UserService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
