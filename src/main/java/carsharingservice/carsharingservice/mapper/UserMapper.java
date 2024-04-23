@@ -1,8 +1,8 @@
 package carsharingservice.carsharingservice.mapper;
 
 import carsharingservice.carsharingservice.config.MapperConfig;
-import carsharingservice.carsharingservice.dto.UserRegistrationRequestDto;
-import carsharingservice.carsharingservice.dto.UserResponseDto;
+import carsharingservice.carsharingservice.dto.auth.UserRegistrationRequestDto;
+import carsharingservice.carsharingservice.dto.auth.UserResponseDto;
 import carsharingservice.carsharingservice.models.User;
 import org.mapstruct.Mapper;
 import org.springframework.stereotype.Component;

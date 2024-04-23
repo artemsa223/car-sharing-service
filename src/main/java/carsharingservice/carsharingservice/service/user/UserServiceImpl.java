@@ -1,7 +1,7 @@
-package carsharingservice.carsharingservice.service;
+package carsharingservice.carsharingservice.service.user;
 
-import carsharingservice.carsharingservice.dto.UserRegistrationRequestDto;
-import carsharingservice.carsharingservice.dto.UserResponseDto;
+import carsharingservice.carsharingservice.dto.auth.UserRegistrationRequestDto;
+import carsharingservice.carsharingservice.dto.auth.UserResponseDto;
 import carsharingservice.carsharingservice.exception.EntityNotFoundException;
 import carsharingservice.carsharingservice.exception.RegistrationException;
 import carsharingservice.carsharingservice.mapper.UserMapper;
