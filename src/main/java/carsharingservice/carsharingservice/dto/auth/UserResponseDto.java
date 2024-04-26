@@ -1,13 +1,12 @@
 package carsharingservice.carsharingservice.dto.auth;
 
-import lombok.Data;
+import carsharingservice.carsharingservice.models.Role;
 
-@Data
-public class UserResponseDto {
-    private Long id;
-    private String email;
-    private String firstName;
-    private String lastName;
-    private String password;
-    private String repeatPassword;
+public record UserResponseDto(
+        Long id,
+        String email,
+        String firstName,
+        String lastName,
+        Role.RoleName role
+) {
 }

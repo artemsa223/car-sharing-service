@@ -13,6 +13,7 @@ import jakarta.persistence.Table;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Set;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.SQLDelete;
@@ -23,6 +24,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 @Getter
 @Setter
 @Entity
+@EqualsAndHashCode(of = "id")
 @SQLDelete(sql = "UPDATE users SET is_deleted = TRUE WHERE id = ?")
 @Where(clause = "is_deleted = FALSE")
 @Table(name = "users")
