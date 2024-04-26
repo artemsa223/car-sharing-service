@@ -9,6 +9,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import java.math.BigDecimal;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import org.hibernate.annotations.SQLDelete;
@@ -17,6 +18,7 @@ import org.hibernate.annotations.Where;
 @Getter
 @Setter
 @Entity
+@EqualsAndHashCode(of = "id")
 @SQLDelete(sql = "UPDATE cars SET is_deleted = TRUE WHERE id = ?")
 @Where(clause = "is_deleted = FALSE")
 @Table(name = "cars")
