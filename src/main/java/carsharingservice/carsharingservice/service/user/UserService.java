@@ -5,7 +5,7 @@ import carsharingservice.carsharingservice.dto.auth.UserResponseDto;
 import carsharingservice.carsharingservice.dto.user.UpdateRole;
 import carsharingservice.carsharingservice.dto.user.UserUpdateDto;
 import carsharingservice.carsharingservice.exception.RegistrationException;
-import carsharingservice.carsharingservice.models.User;
+import carsharingservice.carsharingservice.model.User;
 
 public interface UserService {
     UserResponseDto registerUser(UserRegistrationRequestDto requestDto)

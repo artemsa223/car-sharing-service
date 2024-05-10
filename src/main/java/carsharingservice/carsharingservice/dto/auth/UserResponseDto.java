@@ -1,6 +1,6 @@
 package carsharingservice.carsharingservice.dto.auth;
 
-import carsharingservice.carsharingservice.models.Role;
+import carsharingservice.carsharingservice.model.Role;
 
 public record UserResponseDto(
         Long id,

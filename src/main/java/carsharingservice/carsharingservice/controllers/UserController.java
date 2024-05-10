@@ -3,10 +3,11 @@ package carsharingservice.carsharingservice.controllers;
 import carsharingservice.carsharingservice.dto.auth.UserResponseDto;
 import carsharingservice.carsharingservice.dto.user.UpdateRole;
 import carsharingservice.carsharingservice.dto.user.UserUpdateDto;
-import carsharingservice.carsharingservice.models.User;
+import carsharingservice.carsharingservice.model.User;
 import carsharingservice.carsharingservice.service.user.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,6 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     private final UserService userService;
 
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     @PutMapping("/{id}/role")
     @Operation(summary = "Update user's role", description = "Updates user's role")
     UserResponseDto updateUserRole(

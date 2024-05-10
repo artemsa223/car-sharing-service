@@ -1,6 +1,6 @@
 package carsharingservice.carsharingservice.dto.cars;
 
-import carsharingservice.carsharingservice.models.Type;
+import carsharingservice.carsharingservice.model.Type;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Positive;
 import java.math.BigDecimal;

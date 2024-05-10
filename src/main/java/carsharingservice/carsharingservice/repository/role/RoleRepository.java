@@ -1,6 +1,6 @@
-package carsharingservice.carsharingservice.repository;
+package carsharingservice.carsharingservice.repository.role;
 
-import carsharingservice.carsharingservice.models.Role;
+import carsharingservice.carsharingservice.model.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface RoleRepository extends JpaRepository<Role, Long> {

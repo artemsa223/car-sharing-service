@@ -1,4 +1,4 @@
-package carsharingservice.carsharingservice.models;
+package carsharingservice.carsharingservice.model;
 
 public enum Type {
     SEDAN,
