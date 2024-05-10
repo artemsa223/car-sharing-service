@@ -1,6 +1,6 @@
-package carsharingservice.carsharingservice.repository;
+package carsharingservice.carsharingservice.repository.user;
 
-import carsharingservice.carsharingservice.models.User;
+import carsharingservice.carsharingservice.model.User;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 
