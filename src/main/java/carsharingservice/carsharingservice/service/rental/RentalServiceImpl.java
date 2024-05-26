@@ -15,6 +15,7 @@ import carsharingservice.carsharingservice.repository.car.CarRepository;
 import carsharingservice.carsharingservice.repository.rental.RentalRepository;
 import carsharingservice.carsharingservice.repository.rental.RentalSpecificationBuilder;
 import carsharingservice.carsharingservice.service.car.CarService;
+import carsharingservice.carsharingservice.service.notification.NotificationService;
 import carsharingservice.carsharingservice.service.user.UserService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -25,6 +26,10 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @RequiredArgsConstructor
 public class RentalServiceImpl implements RentalService {
+    private static final String NEW_RENTAL_BOOKED_MESSAGE = "New rental booked:";
+    private static final String OVERDUE_RENTAL_MESSAGE = "Overdue rental:";
+    private static final String NO_OVERDUE_MESSAGE = "No rentals overdue today!";
+
     private final RentalMapper rentalMapper;
     private final RentalRepository rentalRepository;
     private final UserService userService;
@@ -32,6 +37,7 @@ public class RentalServiceImpl implements RentalService {
     private final CarMapper carMapper;
     private final CarRepository carRepository;
     private final RentalSpecificationBuilder rentalSpecificationBuilder;
+    private final NotificationService notificationService;
 
     @Transactional
     @Override
@@ -50,6 +56,11 @@ public class RentalServiceImpl implements RentalService {
         Rental savedRental = rentalRepository.save(rental);
         RentalResponseDto response = rentalMapper.toDto(savedRental);
         response.setRentalId(savedRental.getId());
+
+        String notificationMessage = buildNotificationMessage(rental);
+        notificationService.sendNotification(NEW_RENTAL_BOOKED_MESSAGE
+                + notificationMessage);
+
         return response;
     }
 
@@ -87,5 +98,13 @@ public class RentalServiceImpl implements RentalService {
         return rentalRepository.findAll(rentalSpecification).stream()
                 .map(rentalMapper::toDto)
                 .toList();
+    }
+
+    private String buildNotificationMessage(Rental rental) {
+        return " Rental ID: " + rental.getId() + System.lineSeparator()
+                + " Car: " + rental.getCar().getModel() + System.lineSeparator()
+                + " User: " + rental.getUser().getFirstName() + System.lineSeparator()
+                + " Start date: " + rental.getRentalDate() + System.lineSeparator()
+                + " End date: " + rental.getReturnDate() + System.lineSeparator();
     }
 }
