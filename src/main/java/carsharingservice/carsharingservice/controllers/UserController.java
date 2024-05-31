@@ -6,6 +6,7 @@ import carsharingservice.carsharingservice.dto.user.UserUpdateDto;
 import carsharingservice.carsharingservice.model.User;
 import carsharingservice.carsharingservice.service.user.UserService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
@@ -21,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @CrossOrigin
 @RequestMapping("/users")
+@Tag(name = "users", description = "Operations with users")
 public class UserController {
     private final UserService userService;
 
@@ -33,12 +35,14 @@ public class UserController {
     }
 
     @GetMapping("/me")
+    @Operation(summary = "Get user's profile info", description = "Gets user's profile info")
     public UserResponseDto getUser(Authentication authentication) {
         User user = (User) authentication.getPrincipal();
         return userService.getUserDtoById(user.getId());
     }
 
     @PutMapping("/me")
+    @Operation(summary = "Update user's profile info", description = "Updates user's profile info")
     public UserResponseDto updateUserProfileInfo(Authentication authentication,
                                          @RequestBody UserUpdateDto requestDto) {
         User user = (User) authentication.getPrincipal();

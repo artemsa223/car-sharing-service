@@ -38,8 +38,8 @@ import org.springframework.stereotype.Service;
 public class PaymentServiceImpl implements PaymentService {
 
     private static final BigDecimal FINE_MULTIPLIER = BigDecimal.valueOf(1.75);
-    private static final String SUCCESS_URL = "http://localhost:8080/payments/success?rentalId=";
-    private static final String CANCEL_URL = "http://localhost:8080/payments/cancel?rentalId=";
+    private static final String SUCCESS_URL = "http://localhost:8080/payments/success";
+    private static final String CANCEL_URL = "http://localhost:8080/payments/cancel";
     private static final String CANCEL_MESSAGE = """ 
             Payment was cancelled, you can try again
             with the same link, for next 24 hours""";
