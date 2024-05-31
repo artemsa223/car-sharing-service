@@ -8,6 +8,7 @@ import carsharingservice.carsharingservice.exception.BadRequestException;
 import carsharingservice.carsharingservice.model.User;
 import carsharingservice.carsharingservice.service.rental.RentalService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -23,6 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RequestMapping("/rentals")
 @RestController
+@Tag(name = "rentals", description = "Operations with rentals")
 public class RentalController {
     private final RentalService rentalService;
     private final UserDetailsService userDetailsService;

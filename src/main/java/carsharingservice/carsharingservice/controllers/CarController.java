@@ -5,6 +5,7 @@ import carsharingservice.carsharingservice.dto.cars.CarNotDetailedDto;
 import carsharingservice.carsharingservice.dto.cars.CreateCarRequestDto;
 import carsharingservice.carsharingservice.service.car.CarService;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -26,6 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @CrossOrigin
 @RequestMapping("/cars")
+@Tag(name = "cars", description = "Operations with cars")
 public class CarController {
     private final CarService carService;
 
