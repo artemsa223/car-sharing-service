@@ -89,3 +89,19 @@ ___
      ```GET: /payments``` - provides list of user's payments.\
      ```GET: /payments/success``` - endpoint for Stripe redirection when payment is successful.\
      ```GET: /payments/cancel``` - endpoint for Stripe redirection when payment is cancelled
+___
+### KEY TECHNOLOGIES
+1. Language: Java 21. Build System: Maven (with pom.xml file).
+2. The app was created using SOLID principles and follows the Controller - Service - Repository architecture with REST software architectural style for APIs.
+3. Security was implemented using Spring Boot Security with Bearer authorization using JWT tokens.
+4. The Repository layer was implemented using Spring Data JPA (JpaRepository) and Custom Queries.
+5. All sensitive information is protected using Data Transfer Objects (DTOs).
+6. Validation was applied for queries, and custom validation annotations were created for email and password fields in UserRegistrationRequestDto.
+7. Entities fetched from the repository level were automatically transformed into DTOs using Mappers (with MapStruct plugin using Lombok and MapStruct libraries) at the service level.
+8. CustomGlobalExceptionHandler was added to provide more informative exception handling. 
+9. Pagination was added for specific requests.
+10. Stripe payment service and Telegram bot service were used for cashless payment and notification of managers.
+11. All endpoints were documented using Swagger.
+12. Liquibase was used as a database schema change management solution.
+- The default user is "1@ex.com" with the password "sword123" and the role MANAGER.
+- All users registered through the common available endpoint POST: /auth/registration will have the default role CUSTOMER.
