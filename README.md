@@ -89,6 +89,20 @@ ___
      ```GET: /payments``` - provides list of user's payments.\
      ```GET: /payments/success``` - endpoint for Stripe redirection when payment is successful.\
      ```GET: /payments/cancel``` - endpoint for Stripe redirection when payment is cancelled
+## Setting Up the Application
+This chapter contains information on how to set up the ***Car Sharing API***.
+
+#### Requirements:
+* Java Development Kit (JDK) version 21.0.10 or higher
+* Apache Maven version 3.8.7 or higher
+* MySQL Server 8 or MariaDB 11.2.3 if you are a Linux user
+#### Instruction:
+1. Clone this repository to your computer ```git clone git@github.com:artemsa223/car-sharing-service.git```
+2. Move to ***car-sharing-service*** directory
+3. Configure database connection in application.properties 
+4. Configure your Telegram and Stripe properties(see required variables in template.env)
+5. Build the project using ```mvn clean package```
+6. Run the project by ```java -jar car-sharing-app-0.0.1-SNAPSHOT.jar``` command
 ___
 ### KEY TECHNOLOGIES
 1. Language: Java 21. Build System: Maven (with pom.xml file).
