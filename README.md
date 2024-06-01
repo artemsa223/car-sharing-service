@@ -42,6 +42,12 @@ As a first-time explorer of the Telegram and Stripe APIs, I initially faced some
 However, persistence paid off! Successfully integrating Stripe for payments and Telegram for
 notifications elevated the Car Sharing API, ensuring a seamless and secure user experience.
 secure experience.
+
+___
+### Architecture
+
+![architecture](./description/architecture.png)
+
 ___
 ## API Architecture
 The Car Sharing API is build upon a robust and scalable MVC architecture
