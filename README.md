@@ -111,7 +111,7 @@ This chapter contains information on how to set up the ***Car Sharing API***.
 6. Run the project by ```java -jar car-sharing-app-0.0.1-SNAPSHOT.jar``` command
 ___
 ### KEY TECHNOLOGIES
-1. Language: Java 21. Build System: Maven (with pom.xml file).
+1. Language: Java 21. Build System: Maven (with ```pom.xml``` file).
 2. The app was created using SOLID principles and follows the Controller - Service - Repository architecture with REST software architectural style for APIs.
 3. Security was implemented using Spring Boot Security with Bearer authorization using JWT tokens.
 4. The Repository layer was implemented using Spring Data JPA (JpaRepository) and Custom Queries.
@@ -123,5 +123,5 @@ ___
 10. Stripe payment service and Telegram bot service were used for cashless payment and notification of managers.
 11. All endpoints were documented using Swagger.
 12. Liquibase was used as a database schema change management solution.
-- The default user is "1@ex.com" with the password "sword123" and the role MANAGER.
+- The default user is "```1@ex.com```" with the password "```sword123```" and the role MANAGER.
 - All users registered through the common available endpoint POST: /auth/registration will have the default role CUSTOMER.
