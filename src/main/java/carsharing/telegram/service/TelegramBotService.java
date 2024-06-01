@@ -1,7 +1,6 @@
 package carsharing.telegram.service;
 
 import carsharing.exception.NotificationException;
-import carsharing.telegram.service.NotificationService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;

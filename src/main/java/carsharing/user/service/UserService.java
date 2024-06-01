@@ -2,9 +2,9 @@ package carsharing.user.service;
 
 import carsharing.auth.dto.UserRegistrationRequestDto;
 import carsharing.auth.dto.UserResponseDto;
+import carsharing.exception.RegistrationException;
 import carsharing.user.dto.UpdateRole;
 import carsharing.user.dto.UserUpdateDto;
-import carsharing.exception.RegistrationException;
 import carsharing.user.model.User;
 
 public interface UserService {

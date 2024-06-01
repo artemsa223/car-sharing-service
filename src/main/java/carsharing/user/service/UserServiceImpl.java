@@ -2,10 +2,10 @@ package carsharing.user.service;
 
 import carsharing.auth.dto.UserRegistrationRequestDto;
 import carsharing.auth.dto.UserResponseDto;
-import carsharing.user.dto.UpdateRole;
-import carsharing.user.dto.UserUpdateDto;
 import carsharing.exception.EntityNotFoundException;
 import carsharing.exception.RegistrationException;
+import carsharing.user.dto.UpdateRole;
+import carsharing.user.dto.UserUpdateDto;
 import carsharing.user.mapper.UserMapper;
 import carsharing.user.model.Role;
 import carsharing.user.model.User;

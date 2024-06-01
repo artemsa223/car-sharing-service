@@ -1,6 +1,5 @@
 package carsharing.user.model;
 
-import carsharing.user.model.Role;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;

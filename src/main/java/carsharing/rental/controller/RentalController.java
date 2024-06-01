@@ -1,12 +1,12 @@
 package carsharing.rental.controller;
 
+import carsharing.exception.BadRequestException;
 import carsharing.rental.dto.CreateRentalRequestDto;
 import carsharing.rental.dto.RentalResponseDto;
 import carsharing.rental.dto.RentalSearchParameters;
 import carsharing.rental.dto.SetActualReturnDateRequestDto;
-import carsharing.exception.BadRequestException;
-import carsharing.user.model.User;
 import carsharing.rental.service.RentalService;
+import carsharing.user.model.User;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import java.util.List;
