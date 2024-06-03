@@ -46,7 +46,7 @@ secure experience.
 ___
 ### Architecture
 
-![architecture](./description/architecture.png)
+![architecture](./description/architecture.png) 
 
 ___
 ## API Architecture
